@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D8F31309-561F-33C4-5EDF-D518A810E52D}</ProjectGuid>
+    <ProjectGuid>{2CDEC3DE-C794-7327-EB43-134DAADBF024}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,24 +53,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Clue_Object.cs" />
      <Compile Include="Assets\Scripts\CreditsManager.cs" />
-     <Compile Include="Assets\Scripts\Inventory.cs.cs" />
+     <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\P_Controller.cs" />
+     <Compile Include="Assets\Scripts\P_MouseLook.cs" />
+     <Compile Include="Assets\Scripts\P_Movement.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/dolph/OneDrive/Documents/Psychology Game/CPI 441 Psychology Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/dolph/OneDrive/Documents/GitHub/CPI-441-Psychology-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/dolph/OneDrive/Documents/Psychology Game/CPI 441 Psychology Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/dolph/OneDrive/Documents/GitHub/CPI-441-Psychology-Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/dolph/OneDrive/Documents/Psychology Game/CPI 441 Psychology Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/dolph/OneDrive/Documents/GitHub/CPI-441-Psychology-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/dolph/OneDrive/Documents/Psychology Game/CPI 441 Psychology Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/dolph/OneDrive/Documents/GitHub/CPI-441-Psychology-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/dolph/OneDrive/Documents/Psychology Game/CPI 441 Psychology Game/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/dolph/OneDrive/Documents/GitHub/CPI-441-Psychology-Game/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
