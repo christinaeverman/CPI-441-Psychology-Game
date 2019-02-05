@@ -8,6 +8,7 @@ public class Clue_Object : MonoBehaviour
 		seen is what keep tracks if the clue has been been detected by the ray cast emitted by the player
 	 */
     public bool Seen = false;
+    public bool Found = false;
     /*org(orginal) stores its actual texture for when
 	it needs to change back while my is the current texture that is 
 	currently on the object itself
@@ -24,14 +25,26 @@ public class Clue_Object : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Checks if it is seen or not if it is it changes color other wise it resetss
-        if (Seen == true)
+        // highlights clue if close and hovering over it
+        if (Seen && !Found)
         {
             my_material.color = Color.yellow;
         }
-        else {
+        // if the player does not click on the clue and hovers away from it, then it has not been found yet
+        else if (!Found)
+        {
             my_material.color = Color.gray;
         }
-        Debug.Log(Seen);
+
+    }
+
+    void OnMouseDown()
+    {
+        // clue is added to the inventory
+        if (Seen == true)
+        {
+            Found = true;
+            my_material.color = Color.red;
+        }
     }
 }
