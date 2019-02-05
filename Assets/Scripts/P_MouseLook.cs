@@ -67,11 +67,11 @@ public class P_MouseLook : MonoBehaviour
                 CurrentClueObj = hit.collider.gameObject.GetComponent<Clue_Object>();
                 CurrentClueObj.Seen = true;
             }
-            /*
+            
             else {
                 CurrentClueObj.Seen = false;
                 Debug.Log("false");
-            }*/
+            }
         }
         Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.cyan);
     }
