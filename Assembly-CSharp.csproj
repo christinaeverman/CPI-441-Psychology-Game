@@ -15,7 +15,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -57,8 +57,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Clue_Object.cs" />
     <Compile Include="Assets\Scripts\CreditsManager.cs" />
+    <Compile Include="Assets\Scripts\Door_Behavior.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\LoadRoom1.cs" />
     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\P_Controller.cs" />
     <Compile Include="Assets\Scripts\P_MouseLook.cs" />
