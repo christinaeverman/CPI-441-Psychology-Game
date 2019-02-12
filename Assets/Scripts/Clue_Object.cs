@@ -31,17 +31,17 @@ public class Clue_Object : MonoBehaviour
         if (Seen && !Found)
         {
             my_material.color = Color.yellow;
-            //ePanel.gameObject.SetActive(true);
+            Debug.Log("Found");
         }
         // if the player does not click on the clue and hovers away from it, then it has not been found yet
         else if (!Found)
         {
             my_material.color = Color.gray;
-            //ePanel.gameObject.SetActive(false);
         }
 
     }
-
+    
+    /*
     void OnMouseDown()
     {
         // clue is added to the inventory
@@ -51,4 +51,5 @@ public class Clue_Object : MonoBehaviour
             my_material.color = Color.red;
         }
     }
+    */
 }

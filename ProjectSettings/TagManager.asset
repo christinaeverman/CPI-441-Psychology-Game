@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TagClue
   - Clue4
+  - Door
   layers:
   - Default
   - TransparentFX

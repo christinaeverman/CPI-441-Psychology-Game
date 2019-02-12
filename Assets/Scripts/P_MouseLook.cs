@@ -36,6 +36,7 @@ public class P_MouseLook : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         //player = this.transform.parent.gameObject;
         originalPos = transform.localRotation;
 
@@ -62,18 +63,27 @@ public class P_MouseLook : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, raycastLength))
         {
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             if (hit.collider.tag == "TagClue")
             {
-                //Debug.Log("detected clue");
+                Debug.Log("detected clue");
                 CurrentClueObj = hit.collider.gameObject.GetComponent<Clue_Object>();
                 CurrentClueObj.Seen = true;
-                ePanel.gameObject.SetActive(true);
+
+                if (Input.GetKey("e"))
+                {
+                    CurrentClueObj.gameObject.SetActive(false);
+                    CurrentClueObj.Found = true;
+                    CurrentClueObj.transform.parent.gameObject.SetActive(false);
+                }
+
+                if (CurrentClueObj.Found == false)
+                    ePanel.gameObject.SetActive(true);
             }
             
-            else {
+            else
+            {
                 CurrentClueObj.Seen = false;
-                Debug.Log("false");
                 ePanel.gameObject.SetActive(false);
             }
         }
