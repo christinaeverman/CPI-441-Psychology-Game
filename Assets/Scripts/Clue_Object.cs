@@ -9,6 +9,7 @@ public class Clue_Object : MonoBehaviour
 	 */
     public bool Seen = false;
     public bool Found = false;
+    static GameObject ePanel;
     /*org(orginal) stores its actual texture for when
 	it needs to change back while my is the current texture that is 
 	currently on the object itself
@@ -18,6 +19,7 @@ public class Clue_Object : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ePanel = GameObject.Find("Press E Panel");
         org_material = GetComponent<Renderer>().material;
         my_material = GetComponent<Renderer>().material;
     }
@@ -29,11 +31,13 @@ public class Clue_Object : MonoBehaviour
         if (Seen && !Found)
         {
             my_material.color = Color.yellow;
+            ePanel.gameObject.SetActive(true);
         }
         // if the player does not click on the clue and hovers away from it, then it has not been found yet
         else if (!Found)
         {
             my_material.color = Color.gray;
+            ePanel.gameObject.SetActive(false);
         }
 
     }
