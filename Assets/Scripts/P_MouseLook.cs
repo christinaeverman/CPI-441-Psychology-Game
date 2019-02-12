@@ -30,6 +30,8 @@ public class P_MouseLook : MonoBehaviour
     private float raycastLength = 3;
     private Clue_Object CurrentClueObj;
 
+    public GameObject ePanel;
+
     Quaternion originalPos;
 
     void Start()
@@ -66,11 +68,13 @@ public class P_MouseLook : MonoBehaviour
                 //Debug.Log("detected clue");
                 CurrentClueObj = hit.collider.gameObject.GetComponent<Clue_Object>();
                 CurrentClueObj.Seen = true;
+                ePanel.gameObject.SetActive(true);
             }
             
             else {
                 CurrentClueObj.Seen = false;
                 Debug.Log("false");
+                ePanel.gameObject.SetActive(false);
             }
         }
         Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.cyan);
