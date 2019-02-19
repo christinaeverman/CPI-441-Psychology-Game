@@ -6,7 +6,7 @@ public class P_Controller : MonoBehaviour
 {
 
     /*
-	This class controlls the movement of the player
+	This class controls the movement of the player
 	and is attached to the capsuale of the player but 
 	does NOT control the mouse looking movement
 	
@@ -25,6 +25,7 @@ public class P_Controller : MonoBehaviour
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
         straffe *= Time.deltaTime;
+
 
         transform.Translate(straffe, 0, translation);
 

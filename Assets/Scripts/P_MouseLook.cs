@@ -29,6 +29,7 @@ public class P_MouseLook : MonoBehaviour
     //public GameObject Target;
     private float raycastLength = 3;
     private Clue_Object CurrentClueObj;
+    private Quaternion prevRotation;
 
     public GameObject ePanel;
 
@@ -39,6 +40,7 @@ public class P_MouseLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         //player = this.transform.parent.gameObject;
         originalPos = transform.localRotation;
+        //rotation = Camera.main.GetComponent<CapsuleCollider>().GetComponent<Transform>().localRotation;
 
     }
     // Update is called once per frame
@@ -46,18 +48,30 @@ public class P_MouseLook : MonoBehaviour
     {
         // This controls the players rotation of the camera
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));// md = Mouse Direction
-        
+
+        Quaternion yQuaternion = prevRotation;
         md = Vector2.Scale(md, new Vector2(sensitivityX * smoothing, sensitivityY * smoothing));
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
         mouseLook += smoothV;
 
         Quaternion xQuaternion = Quaternion.AngleAxis(mouseLook.x, Vector3.up);
-        Quaternion yQuaternion = Quaternion.AngleAxis(mouseLook.y, Vector3.left);
+
+        if (mouseLook.y < 30 && mouseLook.y > -50)
+        {
+            yQuaternion = Quaternion.AngleAxis(mouseLook.y, Vector3.left);
+        }
+
         transform.localRotation = originalPos * xQuaternion * yQuaternion;
+        Debug.Log(mouseLook);
+
+        prevRotation = yQuaternion;
+
+        //Camera.main.GetComponent<Transform>().localRotation = originalPos * xQuaternion * yQuaternion;
+        //Camera.main.GetComponent<CapsuleCollider>().localRotation = rotation;
 
         //player.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, player.transform.up);
-        
+
         // This determines the ray casting #endregion
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
