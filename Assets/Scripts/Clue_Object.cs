@@ -16,9 +16,20 @@ public class Clue_Object : MonoBehaviour
 	*/
     Material org_material, my_material;
 
+    //List<Renderer> rendererList = new List<Renderer>();
+    //List<Material> materialList = new List<Material>();
+    //GameObject container;
+
     // Use this for initialization
     void Start()
     {
+        /*
+        foreach (Renderer renderer in container.GetComponentsInChildren<Renderer>())
+        {
+            materialList.Add(renderer.material);
+        }
+        */
+
         //ePanel = GameObject.Find("Press E Panel");
         org_material = GetComponent<Renderer>().material;
         my_material = GetComponent<Renderer>().material;
@@ -31,6 +42,14 @@ public class Clue_Object : MonoBehaviour
         if (Seen && !Found)
         {
             my_material.color = Color.yellow;
+
+            /*
+            foreach (Material material in materialList)
+            {
+                material.color = Color.yellow;
+            }
+            */
+            
         }
         // if the player does not click on the clue and hovers away from it, then it has not been found yet
         else if (!Found)

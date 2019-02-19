@@ -63,7 +63,7 @@ public class P_MouseLook : MonoBehaviour
         }
 
         transform.localRotation = originalPos * xQuaternion * yQuaternion;
-        Debug.Log(mouseLook);
+        //Debug.Log(mouseLook);
 
         prevRotation = yQuaternion;
 
