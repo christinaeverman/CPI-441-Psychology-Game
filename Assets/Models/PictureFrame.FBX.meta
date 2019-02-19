@@ -37,7 +37,12 @@ ModelImporter:
     4300006: Box005
     4300008: Plane001
     4300010: Cone001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 312c38c558dad1a43b609e5fac6e70a3, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

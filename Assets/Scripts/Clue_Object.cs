@@ -31,12 +31,11 @@ public class Clue_Object : MonoBehaviour
         if (Seen && !Found)
         {
             my_material.color = Color.yellow;
-            Debug.Log("Found");
         }
         // if the player does not click on the clue and hovers away from it, then it has not been found yet
         else if (!Found)
         {
-            my_material.color = Color.gray;
+            my_material.color = Color.white;
         }
 
     }
