@@ -38,6 +38,7 @@ public class P_MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         //player = this.transform.parent.gameObject;
         originalPos = transform.localRotation;
         //rotation = Camera.main.GetComponent<CapsuleCollider>().GetComponent<Transform>().localRotation;
@@ -86,6 +87,7 @@ public class P_MouseLook : MonoBehaviour
 
                 if (Input.GetKey("e"))
                 {
+                    CurrentClueObj.descriptionPanel.SetActive(false);
                     CurrentClueObj.gameObject.SetActive(false);
                     CurrentClueObj.Found = true;
                     CurrentClueObj.transform.parent.gameObject.SetActive(false);
