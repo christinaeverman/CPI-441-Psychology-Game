@@ -15,6 +15,7 @@ public class Clue_Object : MonoBehaviour
 	currently on the object itself
 	*/
     Material org_material, my_material;
+    public GameObject descriptionPanel;
 
     //List<Renderer> rendererList = new List<Renderer>();
     //List<Material> materialList = new List<Material>();
@@ -42,6 +43,7 @@ public class Clue_Object : MonoBehaviour
         if (Seen && !Found)
         {
             my_material.color = Color.yellow;
+            descriptionPanel.SetActive(true);
 
             /*
             foreach (Material material in materialList)
@@ -55,6 +57,7 @@ public class Clue_Object : MonoBehaviour
         else if (!Found)
         {
             my_material.color = Color.white;
+            descriptionPanel.SetActive(false);
         }
 
     }
