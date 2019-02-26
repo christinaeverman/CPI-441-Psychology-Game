@@ -11,10 +11,10 @@ public class LevelManager : MonoBehaviour
     public Clue_Object Clue2;
     public Clue_Object Clue3;
     public Clue_Object Clue4;
-    public Text Clue1_Text;
-    public Text Clue2_Text;
-    public Text Clue3_Text;
-    public Text Clue4_Text;
+    public GameObject Clue1_Text;
+    public GameObject Clue2_Text;
+    public GameObject Clue3_Text;
+    public GameObject Clue4_Text;
     public Image Clue1_Image;
     public Image Clue2_Image;
     public Image Clue3_Image;
@@ -32,37 +32,29 @@ public class LevelManager : MonoBehaviour
     {
         if (Clue1.Found)
         {
-            Color color = Clue1_Text.color;
-            color.a = 255;
-            Clue1_Text.color = color;
-            color = Clue1_Image.color;
+            Clue1_Text.SetActive(true);
+            Color color = Clue1_Image.color;
             color.a = 255;
             Clue1_Image.color = color;
         }
         if (Clue2.Found)
         {
-            Color color = Clue2_Text.color;
-            color.a = 255;
-            Clue2_Text.color = color;
-            color = Clue2_Image.color;
+            Clue2_Text.SetActive(true);
+            Color color = Clue2_Image.color;
             color.a = 255;
             Clue2_Image.color = color;
         }
         if (Clue3.Found)
         {
-            Color color = Clue3_Text.color;
-            color.a = 255;
-            Clue3_Text.color = color;
-            color = Clue3_Image.color;
+            Clue3_Text.SetActive(true);
+            Color color = Clue3_Image.color;
             color.a = 255;
             Clue3_Image.color = color;
         }
         if (Clue4.Found)
         {
-            Color color = Clue2_Text.color;
-            color.a = 255;
-            Clue4_Text.color = color;
-            color = Clue4_Image.color;
+            Clue4_Text.SetActive(true);
+            Color color = Clue4_Image.color;
             color.a = 255;
             Clue4_Image.color = color;
         }
