@@ -35,6 +35,13 @@ public class P_MouseLook : MonoBehaviour
 
     Quaternion originalPos;
 
+    // audio
+    AudioSource source;
+    public AudioClip pickupPaper1;
+    public AudioClip pickupPaper2;
+
+    int selectPaperPickup;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -42,11 +49,14 @@ public class P_MouseLook : MonoBehaviour
         //player = this.transform.parent.gameObject;
         originalPos = transform.localRotation;
         //rotation = Camera.main.GetComponent<CapsuleCollider>().GetComponent<Transform>().localRotation;
-
+        source = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
     {
+        // random number generator to select sounds
+        selectPaperPickup = Random.Range(1, 3);
+
         // This controls the players rotation of the camera
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));// md = Mouse Direction
 
@@ -59,9 +69,7 @@ public class P_MouseLook : MonoBehaviour
         Quaternion xQuaternion = Quaternion.AngleAxis(mouseLook.x, Vector3.up);
 
         if (mouseLook.y < 30 && mouseLook.y > -50)
-        {
             yQuaternion = Quaternion.AngleAxis(mouseLook.y, Vector3.left);
-        }
 
         transform.localRotation = originalPos * xQuaternion * yQuaternion;
         //Debug.Log(mouseLook);
@@ -81,16 +89,33 @@ public class P_MouseLook : MonoBehaviour
             //Debug.Log(hit.collider.name);
             if (hit.collider.tag == "TagClue")
             {
-                Debug.Log("detected clue");
+                //Debug.Log("detected clue");
                 CurrentClueObj = hit.collider.gameObject.GetComponent<Clue_Object>();
                 CurrentClueObj.Seen = true;
 
                 if (Input.GetKey("e"))
                 {
+                    //Debug.Log("Storing clue in inventory");
                     CurrentClueObj.descriptionPanel.SetActive(false);
                     CurrentClueObj.gameObject.SetActive(false);
                     CurrentClueObj.Found = true;
                     CurrentClueObj.transform.parent.gameObject.SetActive(false);
+
+                    switch (selectPaperPickup)
+                    {
+                        case 1:
+                            source.PlayOneShot(pickupPaper1, 1f);
+                            Debug.Log("sound 1");
+                            break;
+                        case 2:
+                            source.PlayOneShot(pickupPaper2, 1f);
+                            //Debug.Log("sound 2");
+                            break;
+                        default:
+                            //Debug.Log("Error in paper pickup sound");
+                            break;
+                    }
+                    //Debug.Log("after switch statement");
                 }
 
                 if (CurrentClueObj.Found == false)
