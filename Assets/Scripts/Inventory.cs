@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour /*, IPointerEnterHandler, IPointerExitHan
         {
             Debug.Log("Closing Inventory");
             showInventory = false;
-            GetComponent<RectTransform>().localPosition = new Vector3(0, -440, 0);
+            GetComponent<RectTransform>().localPosition = new Vector3(0, -450, 0);
         }
     }
 
