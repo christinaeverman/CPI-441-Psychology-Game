@@ -1938,7 +1938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &345662605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5857,7 +5857,7 @@ GameObject:
   - component: {fileID: 1120237267}
   - component: {fileID: 1120237266}
   - component: {fileID: 1120237265}
-  - component: {fileID: 1120237269}
+  - component: {fileID: 1120237270}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -5937,7 +5937,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1120237269
+--- !u!114 &1120237270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5946,9 +5946,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1120237264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 462ba2a490a831443af6b61c6cf96a6f, type: 3}
+  m_Script: {fileID: 11500000, guid: a0d20728720545d4387a63e80ea883c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomName: Cognitive Level
 --- !u!1 &1131724301
 GameObject:
   m_ObjectHideFlags: 0
@@ -6725,7 +6726,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 1.2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1352486522
@@ -7681,6 +7682,7 @@ GameObject:
   - component: {fileID: 1538410035}
   - component: {fileID: 1538410034}
   - component: {fileID: 1538410033}
+  - component: {fileID: 1538410037}
   m_Layer: 0
   m_Name: Door5
   m_TagString: Untagged
@@ -7696,7 +7698,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538410032}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7760,6 +7762,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1538410037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538410032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d20728720545d4387a63e80ea883c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Humanistic Level
 --- !u!1 &1589344860
 GameObject:
   m_ObjectHideFlags: 0
@@ -9750,7 +9765,7 @@ GameObject:
   - component: {fileID: 1967538382}
   - component: {fileID: 1967538381}
   - component: {fileID: 1967538385}
-  - component: {fileID: 1967538386}
+  - component: {fileID: 1967538387}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -9846,7 +9861,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1967538386
+--- !u!114 &1967538387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9855,9 +9870,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967538380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd962f9bebba8444bb4ffa07bb34ec46, type: 3}
+  m_Script: {fileID: 11500000, guid: a0d20728720545d4387a63e80ea883c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomName: Psychoanalytic Level
 --- !u!1 &1984754694
 GameObject:
   m_ObjectHideFlags: 0
@@ -10054,6 +10070,7 @@ GameObject:
   - component: {fileID: 2026991867}
   - component: {fileID: 2026991866}
   - component: {fileID: 2026991865}
+  - component: {fileID: 2026991869}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Untagged
@@ -10069,7 +10086,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026991864}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10133,6 +10150,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2026991869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026991864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d20728720545d4387a63e80ea883c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Biological Level
 --- !u!1 &2037695393
 GameObject:
   m_ObjectHideFlags: 0
@@ -10452,6 +10482,7 @@ GameObject:
   - component: {fileID: 2118891946}
   - component: {fileID: 2118891945}
   - component: {fileID: 2118891944}
+  - component: {fileID: 2118891948}
   m_Layer: 0
   m_Name: Door4
   m_TagString: Untagged
@@ -10467,7 +10498,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118891943}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10531,3 +10562,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118891948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118891943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d20728720545d4387a63e80ea883c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Behavioral Level

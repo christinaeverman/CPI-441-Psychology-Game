@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cognitive Level.unity
     guid: b911085914cec0a488d86c8c51ca6692
+  - enabled: 1
+    path: Assets/Scenes/Behavioral Level.unity
+    guid: defd3c348e2d63242b2c95405751d9cb
+  - enabled: 1
+    path: Assets/Scenes/Biological Level.unity
+    guid: 233dd983b2ab05a428827c7b8d6148a7
+  - enabled: 1
+    path: Assets/Scenes/Humanistic Level.unity
+    guid: ed6c86a3c7aaff74fbb7d0ccbbfdbb05
   m_configObjects: {}
