@@ -20,7 +20,7 @@ public class LoadRoom : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == "MainCamera")
+        if (coll.gameObject.tag == "Player")
             Application.LoadLevel(roomName);
     }
 }
