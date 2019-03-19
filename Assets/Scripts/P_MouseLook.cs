@@ -95,7 +95,7 @@ public class P_MouseLook : MonoBehaviour
 
                 if (Input.GetKey("e"))
                 {
-                    //Debug.Log("Storing clue in inventory");
+                    Debug.Log("Storing clue in inventory");
                     CurrentClueObj.descriptionPanel.SetActive(false);
                     CurrentClueObj.gameObject.SetActive(false);
                     CurrentClueObj.Found = true;
