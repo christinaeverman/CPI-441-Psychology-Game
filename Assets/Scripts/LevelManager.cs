@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FoundAll = false;
         menuOpened = false;
     }
 
@@ -60,7 +61,9 @@ public class LevelManager : MonoBehaviour
         }
 
         if (Clue1.Found && Clue2.Found && Clue3.Found && Clue4.Found)
+        {
             FoundAll = true;
+        }
     }
 
     public void ShowObject(GameObject obj)

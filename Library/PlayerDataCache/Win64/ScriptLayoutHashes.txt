@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Christina/Desktop/School/CPI 441/Build_3_19_19/CPI 441 Psychology Game.exe
+C:/Users/Christina/Desktop/School/CPI 441/Build_3_26_19/CPI 441 Psychology Game.exe
 SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/Psychoanalytic Level.unity
@@ -92,6 +92,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+3fbb1a5ffeb0d2dc3502a3dae62a7533 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -125,6 +126,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 d673412b6a43c19325ec749dccf11d30 Assembly-CSharp.dll:.Clue_Object
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
+0568889868f6fb744b2ecba530349fde Assembly-CSharp.dll:.ExampleWheelController
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 d48e353b106f8c4596de6dc5ab6d11d0 Assembly-CSharp.dll:.LoadRoom
 abcc51d876a8c9fc2a12f0639cd7ef2e Assembly-CSharp.dll:.LevelManager
@@ -162,12 +164,18 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
+bd89c02c54734bc10c39b2afb3d65590 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 836a38a03bf14f638be6adbb744aac2f Assembly-CSharp.dll:.Inventory
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MainMenuManager
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
+5a0e5ac65bd40c54ca67e5312d79593f Assembly-CSharp.dll:.Global_Inventory
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 1d423943cda09bb55ead1c269b535cc4 Assembly-CSharp.dll:.Door_Behavior
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-836a38a03bf14f638be6adbb744aac2f Assembly-CSharp.dll:.Global_Inventory
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_1
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level2
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level3
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level4
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level5
