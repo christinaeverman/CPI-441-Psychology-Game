@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 10
+  controlID: 115
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 11
+  controlID: 52
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 12
+  controlID: 53
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,8 +212,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 451
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -383,9 +383,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.184787, y: 0.14468813, z: -1.2331483}
+    m_Target: {x: -1.0922976, y: 1.5686758, z: 0.08155966}
     speed: 2
-    m_Value: {x: 5.184787, y: 0.14468813, z: -1.2331483}
+    m_Value: {x: -1.0922976, y: 1.5686758, z: 0.08155966}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -417,9 +417,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.115721196, y: 0.68104947, z: -0.11028924, w: 0.7145744}
   m_Size:
-    m_Target: 11.385744
+    m_Target: 6.400963
     speed: 2
-    m_Value: 11.385744
+    m_Value: 6.400963
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -486,9 +486,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5c3a0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 46e8ffff58e8ffffc2ebffff46edffff42f1ffff06f3ffff1cfaffffbe420000c8420000044b00000e4b0000d44f0000
+      m_SelectedIDs: 22e60000
+      m_LastClickedID: 58914
+      m_ExpandedIDs: 9c34ffff8239ffff383effff6843ffff5a48ffff0456ffff1e57ffff3c57ffff7658ffff8e59fffff45dffff585fffffd463ffff9666ffffaa66ffff5e67ffff7267ffff26bdffff16c2ffff02d0fffff2d4ffff8adaffff50dfffff86e4ffffd2edffff60f2ffff84f7ffff38fbffff5e4300001a490000e44b000014b80000d0d20000d8d8000094db00009ce1000058e40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -550,20 +550,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\dolph\OneDrive\Documents\GitHub\CPI-441-Psychology-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: e03a0000
-    m_LastClickedID: 15072
-    m_ExpandedIDs: 00000000622e000044310000e03a000000ca9a3b
+    scrollPos: {x: 0, y: 25.047373}
+    m_SelectedIDs: dc2a0000
+    m_LastClickedID: 10972
+    m_ExpandedIDs: 00000000f8270000dc2a0000d83100007634000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,7 +591,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000622e000044310000e03a0000
+    m_ExpandedIDs: 00000000f8270000dc2a000076340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
