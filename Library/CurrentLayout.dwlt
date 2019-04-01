@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 115
+  controlID: 109
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 52
+  controlID: 110
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 53
+  controlID: 111
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -486,9 +486,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 22e60000
-      m_LastClickedID: 58914
-      m_ExpandedIDs: 9c34ffff8239ffff383effff6843ffff5a48ffff0456ffff1e57ffff3c57ffff7658ffff8e59fffff45dffff585fffffd463ffff9666ffffaa66ffff5e67ffff7267ffff26bdffff16c2ffff02d0fffff2d4ffff8adaffff50dfffff86e4ffffd2edffff60f2ffff84f7ffff38fbffff5e4300001a490000e44b000014b80000d0d20000d8d8000094db00009ce1000058e40000
+      m_SelectedIDs: 729c0000
+      m_LastClickedID: 40050
+      m_ExpandedIDs: f655ffff105bffff2465ffff226bffffae6fffffcc6fffffd66fffff8070ffff5474ffff3275ffff2e79ffffba7bffffc67bffffd27bffffde7bfffffab7ffff18b8ffff4cb9fffff8b9ffffcebdffffaebeffffacc2ffff3cc5ffff4ac5ffff56c5ffff64c5ffff4ecdffff66d3ffff40600000f4880000e8910000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -550,20 +550,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\dolph\OneDrive\Documents\GitHub\CPI-441-Psychology-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 25.047373}
-    m_SelectedIDs: dc2a0000
-    m_LastClickedID: 10972
-    m_ExpandedIDs: 00000000f8270000dc2a0000d83100007634000000ca9a3b
+    scrollPos: {x: 0, y: 157.2}
+    m_SelectedIDs: 44370000
+    m_LastClickedID: 14148
+    m_ExpandedIDs: 000000002a2c0000da2d0000b83400004437000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,7 +591,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f8270000dc2a000076340000
+    m_ExpandedIDs: 000000002a2c0000da2d0000b834000044370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
