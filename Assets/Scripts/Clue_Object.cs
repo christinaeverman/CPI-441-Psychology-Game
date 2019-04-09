@@ -43,6 +43,8 @@ public class Clue_Object : MonoBehaviour
         if (Seen && !Found)
         {
             my_material.color = Color.yellow;
+            //my_material.SetColor("_EMISSION", new Color(0.0927f, 0.4852f, 0.2416f, 0.42f));
+            //my_material.EnableKeyword("_EMISSION");
             descriptionPanel.SetActive(true);
 
             /*

@@ -11,6 +11,7 @@ public class Door_Behavior : MonoBehaviour
     private float distance;
     RaycastHit hit;
     private float raycastLength = 3;
+    public Vector3 rotatePosition;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +36,8 @@ public class Door_Behavior : MonoBehaviour
 
                     if (Input.GetKey("e"))
                     {
-                        transform.localPosition += new Vector3(0, 0, -0.2f);
-                        transform.Rotate(Vector3.up * -160);
+                        transform.localPosition += rotatePosition;
+                        transform.Rotate(Vector3.down * 10);
                         SceneManager.LoadScene("Hub", LoadSceneMode.Single);
                     }
                 }
