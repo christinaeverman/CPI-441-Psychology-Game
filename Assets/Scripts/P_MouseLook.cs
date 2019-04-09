@@ -27,7 +27,7 @@ public class P_MouseLook : MonoBehaviour
 
     RaycastHit hit;
     //public GameObject Target;
-    private float raycastLength = 3;
+    private float raycastLength = 3.8f;
     private Clue_Object CurrentClueObj;
     private Quaternion prevRotation;
 

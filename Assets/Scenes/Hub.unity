@@ -10096,10 +10096,30 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 702103681110113910, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Rewards/Punishment
+      objectReference: {fileID: 0}
+    - target: {fileID: 702103681110113910, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3743052918361619373, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743052918361619373, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Notebook
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743052918361619373, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3374349762088449235, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
@@ -10158,6 +10178,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 7867551318663744425, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Video Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867551318663744425, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 244049359533055767, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -10178,15 +10208,45 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 1742087233992698355, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Maslow's Hierarchy of Needs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742087233992698355, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6788058406841799487, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788058406841799487, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Bell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788058406841799487, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350205989412213024, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4350205989412213024, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 18
+      propertyPath: m_Text
+      value: Floor Mat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350205989412213024, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7307511447003636942, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
@@ -10248,10 +10308,30 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 2044788996414911456, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Self-Development Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044788996414911456, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4706625912293474117, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706625912293474117, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Rat Cage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706625912293474117, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9105204141963699201, guid: 65d040de5f7ceda45a481b820e86e295,
         type: 3}

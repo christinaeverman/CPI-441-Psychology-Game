@@ -58,6 +58,7 @@ public class LevelManager : MonoBehaviour
             Color color = Clue4_Image.color;
             color.a = 255;
             Clue4_Image.color = color;
+            Debug.Log("Clue found and is being placed into the inventory.");
         }
 
         if (Clue1.Found && Clue2.Found && Clue3.Found && Clue4.Found)
