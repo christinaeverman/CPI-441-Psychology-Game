@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadRoom : MonoBehaviour
 {
     public string roomName;
+    public string cluesFoundIn;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class LoadRoom : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player" && PlayerPrefs.GetInt(cluesFoundIn, 0) != 1)
             Application.LoadLevel(roomName);
     }
 }

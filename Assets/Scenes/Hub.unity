@@ -1018,6 +1018,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2061656187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &190629971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7307511447338000636, guid: 65d040de5f7ceda45a481b820e86e295,
+    type: 3}
+  m_PrefabInstance: {fileID: 2061656187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &195639485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1115,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195639485}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &200629184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7307511447100082775, guid: 65d040de5f7ceda45a481b820e86e295,
+    type: 3}
+  m_PrefabInstance: {fileID: 2061656187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &202919296 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1417059075146701833, guid: 65d040de5f7ceda45a481b820e86e295,
@@ -2594,6 +2606,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90, y: -7.979004, z: -11.290985}
+--- !u!1 &676665674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7307511448186672996, guid: 65d040de5f7ceda45a481b820e86e295,
+    type: 3}
+  m_PrefabInstance: {fileID: 2061656187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &677660819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,6 +2891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: Psychoanalytic Level
+  cluesFoundIn: FoundAllLevel1
 --- !u!65 &697802437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3465,6 +3484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: Main Menu
+  cluesFoundIn: 
 --- !u!54 &814214912
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6588,6 +6608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: Biological Level
+  cluesFoundIn: FoundAllLevel3
 --- !u!65 &1510381407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7128,6 +7149,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 90, y: -7.979004, z: -11.290985}
+--- !u!1 &1670040305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7307511447853409466, guid: 65d040de5f7ceda45a481b820e86e295,
+    type: 3}
+  m_PrefabInstance: {fileID: 2061656187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687688519
 GameObject:
   m_ObjectHideFlags: 0
@@ -7913,6 +7940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: Behavioral Level
+  cluesFoundIn: FoundAllLevel4
 --- !u!65 &1792465678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8695,6 +8723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: Cognitive Level
+  cluesFoundIn: FoundAllLevel2
 --- !u!65 &1951333762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9312,6 +9341,11 @@ MonoBehaviour:
   minY: -75
   maxY: 75
   ePanel: {fileID: 0}
+  menuPanel: {fileID: 676665674}
+  menuButtons:
+  - {fileID: 1670040305}
+  - {fileID: 200629184}
+  - {fileID: 190629971}
   pickupPaper1: {fileID: 8300000, guid: 67c7f2e2d6ee8cf4fb3c7bb3bd91ba70, type: 3}
   pickupPaper2: {fileID: 8300000, guid: 479505b2d6d94274bb25eab58951272c, type: 3}
 --- !u!81 &2033988488
@@ -9373,6 +9407,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2037695395}
+  - component: {fileID: 2037695394}
+  - component: {fileID: 2037695396}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -9380,6 +9416,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2037695394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037695393}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f162d54f5669a47b7f853790ae8510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomDoors:
+  - {fileID: 697802436}
+  - {fileID: 1951333761}
+  - {fileID: 1510381406}
+  - {fileID: 1792465677}
+  - {fileID: 2074397222}
 --- !u!4 &2037695395
 Transform:
   m_ObjectHideFlags: 0
@@ -9394,6 +9448,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2037695396
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037695393}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0f2e0faf240829543ae81f78f67bb0ac, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2061656187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10342,6 +10492,106 @@ PrefabInstance:
       propertyPath: m_Text
       value: Whiteboard
       objectReference: {fileID: 0}
+    - target: {fileID: 7307511446724692859, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446512534935, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446615214679, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446615214679, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Menu 'Esc'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446615214679, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446101154439, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Suite 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446101154439, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511446101154439, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447504131431, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Suite 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447504131431, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447504131431, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447600344087, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Suite 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447600344087, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447600344087, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447928275519, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Suite 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447928275519, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511447928275519, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511448147166536, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_Text
+      value: Suite 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511448147166536, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307511448147166536, guid: 65d040de5f7ceda45a481b820e86e295,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65d040de5f7ceda45a481b820e86e295, type: 3}
 --- !u!1 &2061656188 stripped
@@ -10563,6 +10813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomName: Humanistic Level
+  cluesFoundIn: FoundAllLevel5
 --- !u!65 &2074397223
 BoxCollider:
   m_ObjectHideFlags: 0

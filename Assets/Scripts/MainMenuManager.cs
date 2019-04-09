@@ -9,6 +9,8 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         PlayerPrefs.DeleteAll();
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = true;
     }
 
     // Update is called once per frame
