@@ -32,6 +32,8 @@ public class P_MouseLook : MonoBehaviour
     private Quaternion prevRotation;
 
     public GameObject ePanel;
+    public GameObject menuPanel;
+    public GameObject[] menuButtons;
 
     Quaternion originalPos;
 
@@ -39,6 +41,7 @@ public class P_MouseLook : MonoBehaviour
     AudioSource source;
     public AudioClip pickupPaper1;
     public AudioClip pickupPaper2;
+    bool menuOpen = false;
 
     int selectPaperPickup;
 
@@ -46,13 +49,38 @@ public class P_MouseLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        //player = this.transform.parent.gameObject;
         originalPos = transform.localRotation;
-        //rotation = Camera.main.GetComponent<CapsuleCollider>().GetComponent<Transform>().localRotation;
         source = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
+    {
+        if (Input.GetKeyDown("escape") && !menuOpen)
+        {
+            menuOpen = true;
+            menuPanel.gameObject.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            for (int i = 0; i < 3; i++)
+                menuButtons[i].gameObject.SetActive(true);
+        }
+        else if (Input.GetKeyDown("escape") && menuOpen)
+        {
+            menuOpen = false;
+            menuPanel.gameObject.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            for (int i = 0; i < 3; i++)
+                menuButtons[i].gameObject.SetActive(false);
+        }
+
+        if (!menuOpen)
+            mouseMovement();
+    }
+
+    void mouseMovement()
     {
         // random number generator to select sounds
         selectPaperPickup = Random.Range(1, 3);
@@ -72,24 +100,15 @@ public class P_MouseLook : MonoBehaviour
             yQuaternion = Quaternion.AngleAxis(mouseLook.y, Vector3.left);
 
         transform.localRotation = originalPos * xQuaternion * yQuaternion;
-        //Debug.Log(mouseLook);
-
         prevRotation = yQuaternion;
-
-        //Camera.main.GetComponent<Transform>().localRotation = originalPos * xQuaternion * yQuaternion;
-        //Camera.main.GetComponent<CapsuleCollider>().localRotation = rotation;
-
-        //player.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, player.transform.up);
 
         // This determines the ray casting #endregion
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit, raycastLength))
         {
-            //Debug.Log(hit.collider.name);
             if (hit.collider.tag == "TagClue")
             {
-                //Debug.Log("detected clue");
                 CurrentClueObj = hit.collider.gameObject.GetComponent<Clue_Object>();
                 CurrentClueObj.Seen = true;
 
@@ -105,23 +124,19 @@ public class P_MouseLook : MonoBehaviour
                     {
                         case 1:
                             source.PlayOneShot(pickupPaper1, 1f);
-                            Debug.Log("sound 1");
                             break;
                         case 2:
                             source.PlayOneShot(pickupPaper2, 1f);
-                            //Debug.Log("sound 2");
                             break;
                         default:
-                            //Debug.Log("Error in paper pickup sound");
                             break;
                     }
-                    //Debug.Log("after switch statement");
                 }
 
                 if (CurrentClueObj.Found == false)
                     ePanel.gameObject.SetActive(true);
             }
-            
+
             else
             {
                 CurrentClueObj.Seen = false;

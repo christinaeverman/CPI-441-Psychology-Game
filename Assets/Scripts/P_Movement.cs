@@ -29,9 +29,6 @@ public class P_Movement : MonoBehaviour
     {
         timer += 0.5f * speed;
         selectFootstepSound = Random.Range(1, 5);
-
-        if (Input.GetKeyDown("escape"))
-            Cursor.lockState = CursorLockMode.None;
         
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed;

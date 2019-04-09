@@ -1622,7 +1622,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f896f6ce6948a89488bfeb4051e60841, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 07a59d977b5c4cc4e9a1477265d7c4e7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -4109,6 +4109,11 @@ MonoBehaviour:
   minY: -75
   maxY: 75
   ePanel: {fileID: 880176621}
+  menuPanel: {fileID: 1279495204}
+  menuButtons:
+  - {fileID: 414377546}
+  - {fileID: 770730560}
+  - {fileID: 1800883802}
   pickupPaper1: {fileID: 8300000, guid: 67c7f2e2d6ee8cf4fb3c7bb3bd91ba70, type: 3}
   pickupPaper2: {fileID: 8300000, guid: 479505b2d6d94274bb25eab58951272c, type: 3}
 --- !u!81 &967051283
@@ -4578,7 +4583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -416, y: 356}
+  m_AnchoredPosition: {x: 416, y: 356}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063169074
@@ -8290,7 +8295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1959063676
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9036,7 +9041,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -9047,7 +9052,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: Menu 'Esc'
 --- !u!222 &2071535331
 CanvasRenderer:
   m_ObjectHideFlags: 0
