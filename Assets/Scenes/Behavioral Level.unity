@@ -618,7 +618,6 @@ GameObject:
   - component: {fileID: 202721353}
   - component: {fileID: 202721352}
   - component: {fileID: 202721351}
-  - component: {fileID: 202721357}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -729,19 +728,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &202721357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202721350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d20728720545d4387a63e80ea883c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomName: Hub
 --- !u!1001 &208155211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4941,6 +4927,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -4962,22 +4964,6 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100024, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100026, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100032, guid: 474139c1d64ba3141bce56be3affc27e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
