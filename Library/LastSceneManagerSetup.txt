@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Psychoanalytic Level.unity
+- path: Assets/Scenes/Cognitive Level.unity
   isLoaded: 1
   isActive: 1
