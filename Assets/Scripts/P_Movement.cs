@@ -27,17 +27,17 @@ public class P_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += 0.5f * speed;
+        timer += 0.7f * speed * Time.deltaTime;
         selectFootstepSound = Random.Range(1, 5);
         
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed;
+            transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-            transform.localPosition -= Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed;
+            transform.localPosition -= Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            transform.localPosition -= Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * speed;
+            transform.localPosition -= Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * speed;
+            transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * speed * Time.deltaTime;
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
             && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
             && !Input.GetKey(KeyCode.RightArrow))

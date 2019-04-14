@@ -5225,7 +5225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e5c46ac2b77e94eb30cc24993e3ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 5
   rb: {fileID: 1174406890}
   footstep1: {fileID: 8300000, guid: bd0fec48c07b5ef48a08f160e0c66bcc, type: 3}
   footstep2: {fileID: 8300000, guid: 1f40025ed0fca8943a596408c624f88f, type: 3}
