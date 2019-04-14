@@ -27,7 +27,7 @@ public class P_MouseLook : MonoBehaviour
 
     RaycastHit hit;
     //public GameObject Target;
-    private float raycastLength = 3.8f;
+    private float raycastLength = 2.9f;
     private Clue_Object CurrentClueObj;
     private Quaternion prevRotation;
 
@@ -96,7 +96,7 @@ public class P_MouseLook : MonoBehaviour
 
         Quaternion xQuaternion = Quaternion.AngleAxis(mouseLook.x, Vector3.up);
 
-        if (mouseLook.y < 30 && mouseLook.y > -50)
+        if (mouseLook.y < 30 && mouseLook.y > -70)
             yQuaternion = Quaternion.AngleAxis(mouseLook.y, Vector3.left);
 
         transform.localRotation = originalPos * xQuaternion * yQuaternion;
