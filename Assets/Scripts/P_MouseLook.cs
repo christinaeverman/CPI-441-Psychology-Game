@@ -41,6 +41,7 @@ public class P_MouseLook : MonoBehaviour
     AudioSource source;
     public AudioClip pickupPaper1;
     public AudioClip pickupPaper2;
+
     bool menuOpen = false;
 
     int selectPaperPickup;

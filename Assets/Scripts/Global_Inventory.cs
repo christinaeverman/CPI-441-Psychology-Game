@@ -21,10 +21,15 @@ public class Global_Inventory : MonoBehaviour
     int levelNum = 1;
     int prevLevelNum = 1;
 
+    // Audio
+    AudioSource source;
+    public AudioClip inventorySound;
+    public AudioClip tabSound;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,13 +37,13 @@ public class Global_Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown("i") && !showInventory)
         {
-            Debug.Log("Opening Inventory");
+            source.PlayOneShot(inventorySound, 0.4f);
             showInventory = true;
             GetComponent<RectTransform>().localPosition = new Vector3(0, -264, 0);
         }
         else if (Input.GetKeyDown("i") && showInventory)
         {
-            Debug.Log("Closing Inventory");
+            source.PlayOneShot(inventorySound, 0.4f);
             showInventory = false;
             GetComponent<RectTransform>().localPosition = new Vector3(0, -472, 0);
         }
@@ -46,6 +51,7 @@ public class Global_Inventory : MonoBehaviour
         // change tab that is currently open
         if (Input.GetKeyDown("1") && showInventory)
         {
+            source.PlayOneShot(tabSound, 0.3f);
             prevLevelNum = levelNum;
             levelNum = 1;
             levelButtons[prevLevelNum - 1].GetComponent<Image>().color = new Color(0.3867f, 0.0091f, 0.0091f, 1f);
@@ -55,6 +61,7 @@ public class Global_Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown("2") && showInventory)
         {
+            source.PlayOneShot(tabSound, 0.3f);
             prevLevelNum = levelNum;
             levelNum = 2;
             levelButtons[prevLevelNum - 1].GetComponent<Image>().color = new Color(0.3867f, 0.0091f, 0.0091f, 1f);
@@ -64,6 +71,7 @@ public class Global_Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown("3") && showInventory)
         {
+            source.PlayOneShot(tabSound, 0.3f);
             prevLevelNum = levelNum;
             levelNum = 3;
             levelButtons[prevLevelNum - 1].GetComponent<Image>().color = new Color(0.3867f, 0.0091f, 0.0091f, 1f);
@@ -73,6 +81,7 @@ public class Global_Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown("4") && showInventory)
         {
+            source.PlayOneShot(tabSound, 0.3f);
             prevLevelNum = levelNum;
             levelNum = 4;
             levelButtons[prevLevelNum - 1].GetComponent<Image>().color = new Color(0.3867f, 0.0091f, 0.0091f, 1f);
@@ -82,6 +91,7 @@ public class Global_Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown("5") && showInventory)
         {
+            source.PlayOneShot(tabSound, 0.3f);
             prevLevelNum = levelNum;
             levelNum = 5;
             levelButtons[prevLevelNum - 1].GetComponent<Image>().color = new Color(0.3867f, 0.0091f, 0.0091f, 1f);

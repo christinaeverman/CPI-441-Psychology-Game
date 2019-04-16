@@ -8,10 +8,14 @@ public class Inventory : MonoBehaviour /*, IPointerEnterHandler, IPointerExitHan
 {
     public bool showInventory = false;
 
+    // Audio
+    AudioSource source;
+    public AudioClip inventorySound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,27 +23,15 @@ public class Inventory : MonoBehaviour /*, IPointerEnterHandler, IPointerExitHan
     {
         if (Input.GetKeyDown("i") && !showInventory)
         {
-            Debug.Log("Opening Inventory");
+            source.PlayOneShot(inventorySound, 0.4f);
             showInventory = true;
             GetComponent<RectTransform>().localPosition = new Vector3(0, -300, 0);
         }
         else if (Input.GetKeyDown("i") && showInventory)
         {
-            Debug.Log("Closing Inventory");
+            source.PlayOneShot(inventorySound, 0.4f);
             showInventory = false;
             GetComponent<RectTransform>().localPosition = new Vector3(0, -450, 0);
         }
     }
-
-    /*
-    public void OnPointerEnter(PointerEventData pointerEventData)
-    {
-        GetComponent<RectTransform>().localPosition = new Vector3(0, -300, 0);
-    }
-
-    public void OnPointerExit(PointerEventData pointerEventData)
-    {
-        GetComponent<RectTransform>().localPosition = new Vector3(0, -440, 0);
-    }
-    */
 }
