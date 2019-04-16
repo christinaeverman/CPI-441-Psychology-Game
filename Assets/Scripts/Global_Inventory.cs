@@ -426,7 +426,7 @@ public class Global_Inventory : MonoBehaviour
 
     IEnumerator Wait(GameObject descriptionPanel, Image clueSprite)
     {
-        yield return new WaitForSeconds(160f * Time.deltaTime);
+        yield return new WaitForSeconds(5f);
         descriptionPanel.SetActive(false);
         clueSprite.color = Color.white;
         descriptionActive = false;
