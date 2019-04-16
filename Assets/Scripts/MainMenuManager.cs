@@ -36,7 +36,7 @@ public class MainMenuManager : MonoBehaviour
 
     IEnumerator Wait(string sceneName)
     {
-        yield return new WaitForSeconds(12f * Time.deltaTime);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }
