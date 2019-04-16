@@ -912,7 +912,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 24
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
@@ -933,8 +933,9 @@ MonoBehaviour:
     cannot leave until all clues are found.  Once you\u2019ve successfully gathered
     all the clues in each room, you may then begin to assess what approach matches
     with each room based on your clues.  This final assessment can be done through
-    the podium located within the center of the Hub.  Good luck on your research,
-    we\u2019re counting on you!"
+    the podium located within the center of the Hub.  In addition, you can read about
+    each approach to psychology on the whiteboards within the Hub.  Good luck on your
+    research, we\u2019re counting on you!"
 --- !u!222 &2099964492
 CanvasRenderer:
   m_ObjectHideFlags: 0
