@@ -114,12 +114,6 @@ public class P_MouseLook : MonoBehaviour
 
                 if (Input.GetKey("e"))
                 {
-                    Debug.Log("Storing clue in inventory");
-                    CurrentClueObj.descriptionPanel.SetActive(false);
-                    CurrentClueObj.gameObject.SetActive(false);
-                    CurrentClueObj.Found = true;
-                    CurrentClueObj.transform.parent.gameObject.SetActive(false);
-
                     switch (selectPaperPickup)
                     {
                         case 1:
@@ -131,6 +125,20 @@ public class P_MouseLook : MonoBehaviour
                         default:
                             break;
                     }
+
+                    //Debug.Log("Storing clue in inventory");
+                    CurrentClueObj.descriptionPanel.SetActive(false);
+                    
+                    foreach (Transform child in CurrentClueObj.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+
+                    CurrentClueObj.gameObject.SetActive(false);
+
+                    CurrentClueObj.Found = true;
+                    CurrentClueObj.transform.parent.gameObject.SetActive(false);
+                    Debug.Log(selectPaperPickup);
                 }
 
                 if (CurrentClueObj.Found == false)
