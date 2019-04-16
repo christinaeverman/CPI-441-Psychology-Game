@@ -5,10 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    // Audio
+    AudioSource source;
+    public AudioClip buttonSound;
+
+    private IEnumerator waitCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerPrefs.DeleteAll();
+        source = GetComponent<AudioSource>();
+
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = true;
     }
@@ -19,13 +27,16 @@ public class MainMenuManager : MonoBehaviour
         
     }
 
-    public void LoadGame(string sceneName)
+    public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        source.PlayOneShot(buttonSound, 0.4f);
+        waitCoroutine = Wait(sceneName);
+        StartCoroutine(waitCoroutine);
     }
 
-    public void LoadCredits(string sceneName)
+    IEnumerator Wait(string sceneName)
     {
+        yield return new WaitForSeconds(12f * Time.deltaTime);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

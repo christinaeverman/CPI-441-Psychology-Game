@@ -12,11 +12,16 @@ public class Door_Behavior : MonoBehaviour
     RaycastHit hit;
     private float raycastLength = 3;
     public Vector3 rotatePosition;
+    bool exit = false;
+
+    // Audio
+    AudioSource source;
+    public AudioClip doorSound;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,11 +39,14 @@ public class Door_Behavior : MonoBehaviour
                 {
                     exitPanel.gameObject.SetActive(true);
 
-                    if (Input.GetKey("e"))
+                    if (Input.GetKey("e") && !exit)
                     {
+                        source.PlayOneShot(doorSound, 0.3f);
                         transform.localPosition += rotatePosition;
                         transform.Rotate(Vector3.down * 10);
-                        SceneManager.LoadScene("Hub", LoadSceneMode.Single);
+                        StartCoroutine("Wait");
+                        exit = true;
+                        //SceneManager.LoadScene("Hub", LoadSceneMode.Single);
                     }
                 }
                 else if (distance < 3f && !LevelManager.FoundAll)
@@ -54,23 +62,9 @@ public class Door_Behavior : MonoBehaviour
         }
     }
 
-    /*
-    void OnMouseDown()
+    IEnumerator Wait()
     {
-        distance = Vector3.Distance(player.transform.position, transform.position);
-
-        if (distance < 3f && LevelManager.FoundAll)
-        {
-            transform.localPosition += new Vector3(0, 0, -0.2f);
-            transform.Rotate(Vector3.up * -160);
-            SceneManager.LoadScene("Hub", LoadSceneMode.Single);
-        }
-        else if (distance < 3f && !LevelManager.FoundAll)
-        {
-            panel.gameObject.SetActive(true);
-            text.gameObject.SetActive(true);
-            button.gameObject.SetActive(true);
-        }
+        yield return new WaitForSeconds(34f * Time.deltaTime);
+        SceneManager.LoadScene("Hub", LoadSceneMode.Single);
     }
-    */
 }
