@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Christina/Desktop/School/CPI 441/Build_4_16_19/CPI 441 Psychology Game.exe
+C:/Users/dolph/Desktop/Build_4_16_19/CPI 441 Psychology Game.exe
 SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/Psychoanalytic Level.unity
@@ -11,6 +11,7 @@ Assets/Scenes/Behavioral Level.unity
 Assets/Scenes/Biological Level.unity
 Assets/Scenes/Humanistic Level.unity
 Assets/Scenes/Intro.unity
+Assets/Scenes/End.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CreditsManager
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -126,6 +127,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MouseVisible
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 8a21ad1ad107217b104c969906e830c3 Assembly-CSharp.dll:.P_MouseLook
+f5ae83e4b6d4bb41383416880f9a8577 Assembly-CSharp.dll:.hidePanel
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level3
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 edccc1b9d4b5a477ffc175677ad8fd51 Assembly-CSharp.dll:.OpenPanel
@@ -135,6 +137,7 @@ af52526040a2d4eb29cd7a4657b5680a Assembly-CSharp.dll:.TimedPanel
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 0568889868f6fb744b2ecba530349fde Assembly-CSharp.dll:.ExampleWheelController
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
+b9c0292f4fa7813256a0116e360809db Assembly-CSharp.dll:.getName
 8198b03dd8cece833c05ae92b7a51f57 Assembly-CSharp.dll:.LoadRoom
 abcc51d876a8c9fc2a12f0639cd7ef2e Assembly-CSharp.dll:.LevelManager
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -152,6 +155,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DragHandler
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
@@ -169,6 +173,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+e72e9aa755f6b4505ea4e4d3530c3876 Assembly-CSharp.dll:.Inventory
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level2
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
@@ -176,6 +181,7 @@ bd89c02c54734bc10c39b2afb3d65590 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 e72e9aa755f6b4505ea4e4d3530c3876 Assembly-CSharp.dll:.Inventory
 d1125ca22d4eb89121b9435d1cfda091 Assembly-CSharp.dll:.MainMenuManager
+f5ae83e4b6d4bb41383416880f9a8577 Assembly-CSharp.dll:.showPanel
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_Level5
 77f5b61e3a73b4ad3043e55968105d50 Assembly-CSharp.dll:.Global_Inventory
@@ -184,3 +190,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 ca5e1fe268210889e8e07bb817da1c07 Assembly-CSharp.dll:.Door_Behavior
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Clues_Found_1
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Resolution
