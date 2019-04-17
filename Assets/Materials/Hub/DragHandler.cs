@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-
-	public static GameObject itemBeingDragged;
+    #region IBeginDragHandler implementation
+    public static GameObject itemBeingDragged;
 	Vector3 startPosition;
 	Transform startParent;
    
@@ -19,14 +19,20 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 		startParent = transform.parent;
 		GetComponent<CanvasGroup> ().blocksRaycasts = false;
 	}
+    #endregion
 
+    #region IDragHandler implementation
 
-	public void OnDrag (PointerEventData eventData)
+    public void OnDrag (PointerEventData eventData)
 	{
 		transform.position = Input.mousePosition;
 	}
 
-	public void OnEndDrag (PointerEventData eventData)
+    #endregion
+
+    #region IEndDragHander implementation
+
+    public void OnEndDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = null;
 		GetComponent<CanvasGroup> ().blocksRaycasts = true;
@@ -35,5 +41,6 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 			transform.position = startPosition;
 		}
 	}
+    #endregion
 }
 
