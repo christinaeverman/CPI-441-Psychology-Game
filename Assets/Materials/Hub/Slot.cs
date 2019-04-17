@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,12 +16,13 @@ public class Slot : MonoBehaviour, IDropHandler
 		}
 	}
 
-	/*public void OnDrop(PointerEventData eventData)
+    #region IDropHandler implementation
+    public void OnDrop(PointerEventData eventData)
 	{
 		if (!item) {
 			DragHandler.itemBeingDragged.transform.SetParent (transform);
-			ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject,null, (x,y) => x.HasChanged());
+			
 		}
 	}
+    #endregion
 }
-*/
