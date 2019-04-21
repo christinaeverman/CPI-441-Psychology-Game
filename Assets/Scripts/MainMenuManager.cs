@@ -16,6 +16,7 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         source = GetComponent<AudioSource>();
+        PlayerPrefs.SetFloat("mouseSensitivity", 0.8f);
 
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = true;

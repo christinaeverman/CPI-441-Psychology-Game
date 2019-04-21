@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public bool menuOpened;
     public Clue_Object Clue1;
     public Clue_Object Clue2;
     public Clue_Object Clue3;
@@ -25,7 +24,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         FoundAll = false;
-        menuOpened = false;
+        PlayerPrefs.SetInt("menuOpened", 0);
     }
 
     // Update is called once per frame
@@ -58,7 +57,6 @@ public class LevelManager : MonoBehaviour
             Color color = Clue4_Image.color;
             color.a = 255;
             Clue4_Image.color = color;
-            //Debug.Log("Clue found and is being placed into the inventory.");
         }
 
         if (Clue1.Found && Clue2.Found && Clue3.Found && Clue4.Found)

@@ -14,8 +14,6 @@ public class P_MouseLook : MonoBehaviour
     // Use this for initialization
     Vector2 mouseLook;
     Vector2 smoothV;
-    public float sensitivityX = 0.7f;
-    public float sensitivityY = 5.0f;
     private float smoothing = 2.0f;
     //GameObject player;
 
@@ -42,8 +40,6 @@ public class P_MouseLook : MonoBehaviour
     public AudioClip pickupPaper1;
     public AudioClip pickupPaper2;
 
-    bool menuOpen = false;
-
     int selectPaperPickup;
 
     void Start()
@@ -56,9 +52,9 @@ public class P_MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("escape") && !menuOpen)
+        if (Input.GetKeyDown("escape") && PlayerPrefs.GetInt("menuOpened", 0) == 0)
         {
-            menuOpen = true;
+            PlayerPrefs.SetInt("menuOpened", 1);
             menuPanel.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -66,9 +62,9 @@ public class P_MouseLook : MonoBehaviour
             for (int i = 0; i < 3; i++)
                 menuButtons[i].gameObject.SetActive(true);
         }
-        else if (Input.GetKeyDown("escape") && menuOpen)
+        else if (Input.GetKeyDown("escape") && PlayerPrefs.GetInt("menuOpened", 0) == 1)
         {
-            menuOpen = false;
+            PlayerPrefs.SetInt("menuOpened", 0);
             menuPanel.gameObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -77,7 +73,7 @@ public class P_MouseLook : MonoBehaviour
                 menuButtons[i].gameObject.SetActive(false);
         }
 
-        if (!menuOpen)
+        if (PlayerPrefs.GetInt("menuOpened", 0) == 0)
             mouseMovement();
     }
 
@@ -90,7 +86,7 @@ public class P_MouseLook : MonoBehaviour
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));// md = Mouse Direction
 
         Quaternion yQuaternion = prevRotation;
-        md = Vector2.Scale(md, new Vector2(sensitivityX * smoothing, sensitivityY * smoothing));
+        md = Vector2.Scale(md, new Vector2(PlayerPrefs.GetFloat("mouseSensitivity", 0.8f) * smoothing, PlayerPrefs.GetFloat("mouseSensitivity", 0.8f) * smoothing));
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
         mouseLook += smoothV;
@@ -106,14 +102,14 @@ public class P_MouseLook : MonoBehaviour
         // This determines the ray casting #endregion
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, raycastLength))
+        if (Physics.Raycast(ray, out hit, raycastLength) && PlayerPrefs.GetInt("menuOpened", 0) == 0)
         {
             if (hit.collider.tag == "TagClue")
             {
                 CurrentClueObj = hit.collider.gameObject.GetComponent<Clue_Object>();
                 CurrentClueObj.Seen = true;
 
-                if (Input.GetKey("e"))
+                if (Input.GetKey("e") && PlayerPrefs.GetInt("menuOpened", 0) == 0)
                 {
                     switch (selectPaperPickup)
                     {
@@ -126,8 +122,7 @@ public class P_MouseLook : MonoBehaviour
                         default:
                             break;
                     }
-
-                    //Debug.Log("Storing clue in inventory");
+                    
                     CurrentClueObj.descriptionPanel.SetActive(false);
                     
                     foreach (Transform child in CurrentClueObj.transform)
@@ -145,13 +140,13 @@ public class P_MouseLook : MonoBehaviour
                 if (CurrentClueObj.Found == false)
                     ePanel.gameObject.SetActive(true);
             }
-
             else
             {
                 CurrentClueObj.Seen = false;
                 ePanel.gameObject.SetActive(false);
             }
         }
+
         Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.cyan);
     }
 }

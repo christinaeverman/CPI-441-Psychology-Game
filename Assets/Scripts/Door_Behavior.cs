@@ -29,7 +29,7 @@ public class Door_Behavior : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, raycastLength))
+        if (Physics.Raycast(ray, out hit, raycastLength) && PlayerPrefs.GetInt("menuOpened", 0) == 0)
         {
             if (hit.collider.tag == "Door")
             {
@@ -46,7 +46,6 @@ public class Door_Behavior : MonoBehaviour
                         transform.Rotate(Vector3.down * 10);
                         StartCoroutine("Wait");
                         exit = true;
-                        //SceneManager.LoadScene("Hub", LoadSceneMode.Single);
                     }
                 }
                 else if (distance < 3f && !LevelManager.FoundAll)
@@ -62,6 +61,7 @@ public class Door_Behavior : MonoBehaviour
         }
     }
 
+    // for coroutine
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(34f * Time.deltaTime);

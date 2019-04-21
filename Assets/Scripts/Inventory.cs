@@ -21,13 +21,13 @@ public class Inventory : MonoBehaviour /*, IPointerEnterHandler, IPointerExitHan
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("i") && !showInventory)
+        if (Input.GetKeyDown("i") && !showInventory && PlayerPrefs.GetInt("menuOpened", 0) == 0)
         {
             source.PlayOneShot(inventorySound, 0.4f);
             showInventory = true;
             GetComponent<RectTransform>().localPosition = new Vector3(0, -300, 0);
         }
-        else if (Input.GetKeyDown("i") && showInventory)
+        else if (Input.GetKeyDown("i") && showInventory && PlayerPrefs.GetInt("menuOpened", 0) == 0)
         {
             source.PlayOneShot(inventorySound, 0.4f);
             showInventory = false;
