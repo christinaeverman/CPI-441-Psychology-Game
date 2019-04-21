@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class P_MouseLook : MonoBehaviour
 {
@@ -15,7 +17,6 @@ public class P_MouseLook : MonoBehaviour
     Vector2 mouseLook;
     Vector2 smoothV;
     private float smoothing = 2.0f;
-    //GameObject player;
 
     public float minY = -75f;
     public float maxY = 75f;
@@ -24,14 +25,21 @@ public class P_MouseLook : MonoBehaviour
     float rotationY = 0f;
 
     RaycastHit hit;
-    //public GameObject Target;
     private float raycastLength = 2.9f;
     private Clue_Object CurrentClueObj;
     private Quaternion prevRotation;
 
     public GameObject ePanel;
     public GameObject menuPanel;
-    public GameObject[] menuButtons;
+    public Button[] menuButtons;
+    public GameObject quitPanel;
+    public Button yesQuit;
+    public Button noQuit;
+    public GameObject helpPanel;
+    public GameObject settingsPanel;
+    public Slider mouseSensitivity;
+    public Button returnFromSettings;
+    public Button returnFromHelp;
 
     Quaternion originalPos;
 
@@ -48,33 +56,26 @@ public class P_MouseLook : MonoBehaviour
         Cursor.visible = false;
         originalPos = transform.localRotation;
         source = GetComponent<AudioSource>();
+
+        menuButtons[0].onClick.AddListener(ResumeGame);
+        menuButtons[3].onClick.AddListener(Quitting);
+        yesQuit.onClick.AddListener(LoadMainMenu);
+        noQuit.onClick.AddListener(LoadMenu);
+        menuButtons[1].onClick.AddListener(LoadHelp);
+        menuButtons[2].onClick.AddListener(LoadSettings);
+        returnFromSettings.onClick.AddListener(LoadMenu);
+        returnFromHelp.onClick.AddListener(LoadMenu);
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("escape") && PlayerPrefs.GetInt("menuOpened", 0) == 0)
-        {
-            PlayerPrefs.SetInt("menuOpened", 1);
-            menuPanel.gameObject.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-            for (int i = 0; i < 3; i++)
-                menuButtons[i].gameObject.SetActive(true);
-        }
-        else if (Input.GetKeyDown("escape") && PlayerPrefs.GetInt("menuOpened", 0) == 1)
-        {
-            PlayerPrefs.SetInt("menuOpened", 0);
-            menuPanel.gameObject.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-
-            for (int i = 0; i < 3; i++)
-                menuButtons[i].gameObject.SetActive(false);
-        }
-
+            LoadMenu();
         if (PlayerPrefs.GetInt("menuOpened", 0) == 0)
             mouseMovement();
+        
+        if (mouseSensitivity.value != PlayerPrefs.GetFloat("mouseSensitivity", 0))
+            PlayerPrefs.SetFloat("mouseSensitivity", mouseSensitivity.value);
     }
 
     void mouseMovement()
@@ -122,9 +123,9 @@ public class P_MouseLook : MonoBehaviour
                         default:
                             break;
                     }
-                    
+
                     CurrentClueObj.descriptionPanel.SetActive(false);
-                    
+
                     foreach (Transform child in CurrentClueObj.transform)
                     {
                         child.gameObject.SetActive(false);
@@ -148,5 +149,48 @@ public class P_MouseLook : MonoBehaviour
         }
 
         Debug.DrawRay(ray.origin, ray.direction * raycastLength, Color.cyan);
+    }
+
+    void ResumeGame()
+    {
+        PlayerPrefs.SetInt("menuOpened", 0);
+        menuPanel.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void Quitting()
+    {
+        menuPanel.SetActive(false);
+        quitPanel.gameObject.SetActive(true);
+    }
+
+    void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+    }
+
+    void LoadMenu()
+    {
+        PlayerPrefs.SetInt("menuOpened", 1);
+        menuPanel.gameObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        quitPanel.gameObject.SetActive(false);
+        helpPanel.gameObject.SetActive(false);
+        settingsPanel.gameObject.SetActive(false);
+    }
+
+    void LoadHelp()
+    {
+        menuPanel.gameObject.SetActive(false);
+        helpPanel.gameObject.SetActive(true);
+    }
+
+    void LoadSettings()
+    {
+        menuPanel.gameObject.SetActive(false);
+        settingsPanel.gameObject.SetActive(true);
     }
 }
