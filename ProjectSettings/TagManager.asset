@@ -7,6 +7,11 @@ TagManager:
   - TagClue
   - Clue4
   - Door
+  - Suite102
+  - Suite101
+  - Suite103
+  - Suite104
+  - Suite105
   layers:
   - Default
   - TransparentFX
