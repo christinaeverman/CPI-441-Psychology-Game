@@ -40,6 +40,7 @@ public class P_MouseLook : MonoBehaviour
     public Slider mouseSensitivity;
     public Button returnFromSettings;
     public Button returnFromHelp;
+    public GameObject openMenuButton;
 
     Quaternion originalPos;
 
@@ -155,6 +156,7 @@ public class P_MouseLook : MonoBehaviour
     {
         PlayerPrefs.SetInt("menuOpened", 0);
         menuPanel.gameObject.SetActive(false);
+        openMenuButton.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -172,6 +174,7 @@ public class P_MouseLook : MonoBehaviour
 
     void LoadMenu()
     {
+        openMenuButton.gameObject.SetActive(false);
         PlayerPrefs.SetInt("menuOpened", 1);
         menuPanel.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
