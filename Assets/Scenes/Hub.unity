@@ -58,7 +58,7 @@ LightmapSettings:
     m_Resolution: 2
     m_BakeResolution: 32
     m_AtlasSize: 1024
-    m_AO: 0
+    m_AO: 1
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
@@ -8397,6 +8397,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3b22572e447a0184b9441d7b26b89f19, type: 3}
       propertyPath: m_Name
       value: CPI441_Fur_SparkyMousePad
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3b22572e447a0184b9441d7b26b89f19, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3b22572e447a0184b9441d7b26b89f19, type: 3}
       propertyPath: m_LocalPosition.x
