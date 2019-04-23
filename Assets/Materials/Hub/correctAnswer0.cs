@@ -22,5 +22,10 @@ public class correctAnswer0 : MonoBehaviour
 
 		}
 
+		else if (other.CompareTag("Suite102"))
+		{
+			PlayerPrefs.SetInt("correctQuiz1", 2);
+		}
+
 	}
 }

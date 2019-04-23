@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Psychoanalytic Level.unity
     guid: 96609a63d4115a442ae4f8d0e9be55fe
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Instructions.unity
     guid: f650274a78cd46e42aac88e680a6692a
   - enabled: 1
     path: Assets/Scenes/Hub.unity
@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 158396c3a10a816409bec37739eeba21
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0ecdf8fdb0c15a24db91abcc6c45dccb
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: f691e001dfb84814b88e12e580277dbe
