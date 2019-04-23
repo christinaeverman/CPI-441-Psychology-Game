@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class showPanel : MonoBehaviour
 {
 	[SerializeField] private Image customImage;
-    // Start is called before the first frame update
+
 
 	void Update()
 	{
@@ -22,9 +22,9 @@ public class showPanel : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag ("Player") && PlayerPrefs.GetInt("FoundAllLevel1", 0) == 1
+		/*if (other.CompareTag ("Player") && PlayerPrefs.GetInt("FoundAllLevel1", 0) == 1
             && PlayerPrefs.GetInt("FoundAllLevel2", 0) == 1 && PlayerPrefs.GetInt("FoundAllLevel3", 0) == 1
-			&& PlayerPrefs.GetInt("FoundAllLevel4", 0) == 1 && PlayerPrefs.GetInt("FoundAllLevel5", 0) == 1)
+			&& PlayerPrefs.GetInt("FoundAllLevel4", 0) == 1 && PlayerPrefs.GetInt("FoundAllLevel5", 0) == 1)*/
         {
 			customImage.enabled = true;
 			Cursor.visible = true;

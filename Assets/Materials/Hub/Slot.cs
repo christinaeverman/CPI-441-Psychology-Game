@@ -23,6 +23,7 @@ public class Slot : MonoBehaviour, IDropHandler
 			DragHandler.itemBeingDragged.transform.SetParent (transform);
 			
 		}
+
 	}
     #endregion
 }

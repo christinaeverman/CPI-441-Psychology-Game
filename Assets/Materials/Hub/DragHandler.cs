@@ -10,8 +10,8 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     public static GameObject itemBeingDragged;
 	Vector3 startPosition;
 	Transform startParent;
-   
-   
+
+
 	public void OnBeginDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = gameObject;
