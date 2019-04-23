@@ -14,8 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Psychoanalytic Level.unity
     guid: 96609a63d4115a442ae4f8d0e9be55fe
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/f650274a78cd46e42aac88e680a6692a
     guid: f650274a78cd46e42aac88e680a6692a
   - enabled: 1
     path: Assets/Scenes/Hub.unity
@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: f691e001dfb84814b88e12e580277dbe
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 30b10d773e521664493074957c2deee4
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0ecdf8fdb0c15a24db91abcc6c45dccb
   m_configObjects: {}
