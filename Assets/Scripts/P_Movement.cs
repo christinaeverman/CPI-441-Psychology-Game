@@ -30,13 +30,13 @@ public class P_Movement : MonoBehaviour
         timer += 0.7f * speed * Time.deltaTime;
         selectFootstepSound = Random.Range(1, 5);
         
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && PlayerPrefs.GetInt("menuOpened", 0) == 0)
+        if (((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))) && PlayerPrefs.GetInt("menuOpened", 0) == 0 && PlayerPrefs.GetInt("TakingQuiz", 0) == 0)
             transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed * Time.deltaTime;
-        if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && PlayerPrefs.GetInt("menuOpened", 0) == 0)
+        if (((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))) && PlayerPrefs.GetInt("menuOpened", 0) == 0 && PlayerPrefs.GetInt("TakingQuiz", 0) == 0)
             transform.localPosition -= Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * speed * Time.deltaTime;
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && PlayerPrefs.GetInt("menuOpened", 0) == 0)
+        if (((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))) && PlayerPrefs.GetInt("menuOpened", 0) == 0 && PlayerPrefs.GetInt("TakingQuiz", 0) == 0)
             transform.localPosition -= Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * speed * Time.deltaTime;
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && PlayerPrefs.GetInt("menuOpened", 0) == 0)
+        if (((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))) && PlayerPrefs.GetInt("menuOpened", 0) == 0 && PlayerPrefs.GetInt("TakingQuiz", 0) == 0)
             transform.localPosition += Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * speed * Time.deltaTime;
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
             && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
@@ -45,7 +45,8 @@ public class P_Movement : MonoBehaviour
             
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
             Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) ||
-            Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && timer >= 1 && PlayerPrefs.GetInt("menuOpened", 0) == 0)
+            Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && timer >= 1 && PlayerPrefs.GetInt("menuOpened", 0) == 0
+            && PlayerPrefs.GetInt("TakingQuiz", 0) == 0)
         {
             switch(selectFootstepSound)
             {

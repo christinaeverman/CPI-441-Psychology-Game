@@ -53,6 +53,7 @@ public class P_MouseLook : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("TakingQuiz", 0);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         originalPos = transform.localRotation;
@@ -72,7 +73,7 @@ public class P_MouseLook : MonoBehaviour
     {
         if (Input.GetKeyDown("escape") && PlayerPrefs.GetInt("menuOpened", 0) == 0)
             LoadMenu();
-        if (PlayerPrefs.GetInt("menuOpened", 0) == 0)
+        if (PlayerPrefs.GetInt("menuOpened", 0) == 0 && PlayerPrefs.GetInt("TakingQuiz", 0) == 0)
             mouseMovement();
         
         if (mouseSensitivity.value != PlayerPrefs.GetFloat("mouseSensitivity", 0))
